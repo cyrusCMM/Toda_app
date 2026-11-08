@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#f8f6ef">
+  <title>My Todo Board</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <main class="app">
+    <header class="topbar">
+      <div class="logo">✦ <span>daylist</span></div>
+      <button id="themeToggle" class="theme-btn" type="button" aria-pressed="false">☾ Dark mode</button>
+    </header>
+    <section class="hero">
+      <p class="eyebrow">A LITTLE PROGRESS, EVERY DAY</p>
+      <h1>Make space for <em>what matters.</em></h1>
+      <p>Keep your plans simple, visible, and on track.</p>
+    </section>
+    <section class="panel" aria-label="Todo list">
+      <form id="taskForm" class="task-form">
+        <label for="taskInput" class="sr-only">New task</label>
+        <input id="taskInput" type="text" maxlength="120" placeholder="What do you need to do?" autocomplete="off" required>
+        <button type="submit" class="add-btn">+ Add task</button>
+      </form>
+      <div class="toolbar">
+        <p id="taskCount" class="task-count" aria-live="polite">0 tasks left</p>
+        <div class="filters" role="group" aria-label="Filter tasks">
+          <button class="filter active" type="button" data-filter="all" aria-pressed="true">All</button>
+          <button class="filter" type="button" data-filter="active" aria-pressed="false">Active</button>
+          <button class="filter" type="button" data-filter="completed" aria-pressed="false">Completed</button>
+        </div>
+      </div>
+      <ul id="taskList" class="task-list" aria-label="Your tasks"></ul>
+      <div id="emptyState" class="empty-state">✦<p>Nothing here yet. Add your first task!</p></div>
+      <div class="panel-footer">
+        <span>Small steps add up. ✨</span>
+        <button id="clearCompleted" class="clear-btn" type="button">Clear completed</button>
+      </div>
+    </section>
+    <footer class="footer">Made with HTML, CSS & JavaScript · Saved in your browser</footer>
+  </main>
+</body>
+</html>
